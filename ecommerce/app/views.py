@@ -36,7 +36,7 @@ class ProductDetail(View):
 # Create your views here.
 class CustomerRegistrationView(View):
     def get(self,request):
-        form=CustomerRegistrationForm
+        form=CustomerRegistrationForm()
         return render(request,'customerregistration.html',locals())
     def post(self,request):
         form=CustomerRegistrationForm(request.POST)
